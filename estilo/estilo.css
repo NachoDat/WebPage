@@ -101,14 +101,23 @@ main{
 }
      /*Desktop*/
 @media screen and (min-width:401px) {
+.Nav{
+    height: 80px;
+}
 .NavList{
     display: flex;
     flex-direction: row-reverse;
     height: 50px;
    align-items: center;
+   
 }
 .NavItem{
     padding: 5px;
+    margin-top: 40px;
+}
+.NavItem:hover{
+ padding: 10px;
+ background-color: gainsboro;
 }
  .MainIndex{
     display: flex;
@@ -142,6 +151,13 @@ padding: 5px;
 #FormText{
     margin: 20px;
     font-size: 20px;
+}
+.FooterStyle{
+    transition: padding 2s;
+    padding:10px 0px 0px 0px;
+}
+.FooterStyle:hover{
+padding:0px 0px 50px 0px;
 }
 }
 
