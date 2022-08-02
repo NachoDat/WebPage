@@ -1,0 +1,162 @@
+* {
+  padding: 0%;
+  margin: 0%; }
+
+/*Estilo General*/
+a {
+  text-decoration: none;
+  color: white; }
+
+.Text {
+  text-align: center;
+  font-weight: bold; }
+
+.Nav {
+  background-color: black; }
+  .Nav .NavItem {
+    background-color: #3c743c;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 18px;
+    list-style: none;
+    text-align: center;
+    margin: 2px;
+    height: 25px; }
+
+main {
+  height: 550px;
+  background-image: url(river.jpg);
+  background-position: 50% 50%;
+  background-attachment: fixed; }
+  main #Parragraph {
+    margin: 0 20% 0 20%; }
+  main img {
+    height: 100%;
+    width: 100%; }
+  main .ImageBox {
+    margin: 20px; }
+  main h1 {
+    text-align: center; }
+
+.FooterStyle {
+  background-color: black; }
+
+#FormItself {
+  background-color: #3c743c; }
+
+/*MediaQuieries*/
+/*Mobile*/
+@media screen and (max-width: 400px) {
+  .Nav {
+    height: 160px;
+    display: flex;
+    justify-content: center; }
+    .Nav .NavList {
+      width: 75%; }
+    .Nav .NavItem {
+      margin: 5px 0px 5px 0px; }
+  main {
+    display: flex;
+    flex-direction: column;
+    height: 500%; }
+    main .img_box {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center; }
+      main .img_box .photo {
+        width: 100%;
+        height: 100%;
+        border-radius: 20px; }
+      main .img_box .img_chart {
+        margin: 20px;
+        padding: 20px;
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        background-color: #3c743c; }
+        main .img_box .img_chart:hover {
+          height: 85%;
+          width: 85%;
+          background-color: black; }
+    main .FormBox {
+      display: flex;
+      flex-direction: column;
+      align-items: center; }
+    main .Form {
+      margin: 10px;
+      padding: 5px;
+      width: 50%; }
+    main #FormItself {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border-radius: 20px;
+      padding: 20px;
+      height: 150%; }
+    main #FormText {
+      font-size: 18px;
+      margin: 20px; } }
+
+/*Desktop*/
+@media screen and (min-width: 401px) {
+  .Nav {
+    height: 80px; }
+    .Nav .NavList {
+      display: flex;
+      flex-direction: row-reverse;
+      height: 50px;
+      align-items: center; }
+    .Nav .NavItem {
+      padding: 5px;
+      margin-top: 40px; }
+    .Nav .NavItem:hover {
+      padding: 10px;
+      background-color: gainsboro; }
+  .MainIndex {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center; }
+    .MainIndex .ImageBox {
+      width: 50%;
+      height: 50%; }
+  .img_box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    border-radius: 20px; }
+    .img_box .img_chart {
+      display: flex;
+      flex-direction: column-reverse;
+      text-align: center;
+      border-radius: 20px;
+      background-color: #3c743c;
+      width: 100px;
+      margin: 20px;
+      padding: 20px; }
+      .img_box .img_chart .photo {
+        height: 60%; }
+  #Main4 {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    #Main4 #FormItself {
+      display: flex;
+      flex-direction: column;
+      width: 301px;
+      height: 200px;
+      justify-content: space-around;
+      align-items: center;
+      border-radius: 20px; }
+    #Main4 .Form {
+      width: 85%;
+      padding: 5px; }
+    #Main4 #FormText {
+      margin: 20px;
+      font-size: 20px; }
+  .FooterStyle {
+    transition: padding 2s;
+    padding: 10px 0px 0px 0px; }
+  .FooterStyle:hover {
+    padding: 0px 0px 50px 0px; } }
