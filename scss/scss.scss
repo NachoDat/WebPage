@@ -6,6 +6,13 @@ a{
     color: rgb(252, 157, 144);
     text-decoration: none;
 }
+.FooterStyle{
+    transition: padding 2s;
+    padding:10px 0px 0px 0px;
+}
+.FooterStyle:hover{
+padding:0px 0px 50px 0px;
+}
 $navbgcolor:red, orange, yellow,green, lightblue,purple;
 
 @each $bgcolor in $navbgcolor{
@@ -66,7 +73,33 @@ $navbgcolor:red, orange, yellow,green, lightblue,purple;
 }
 
 /*---------Mobile Contacto-------------*/
-
+.main_4{
+    background-image: linear-gradient(to bottom ,black 2%, rgb(58, 58, 58) 80%);
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    @include text(1.5rem);
+        #FormItself{
+            display: flex;
+            flex-direction: column;
+            width: 301px;
+            height: 200px;
+            justify-content: space-around;
+            align-items: center;
+            border-radius: 20px;
+            
+        }
+        .Form{
+        width: 85%;
+        padding: 5px;
+        }
+        #FormText{
+            margin: 20px;
+            font-size: 20px;
+        }
+    }
 
 
                                                 /* -----------Media Desktop--------------*/
