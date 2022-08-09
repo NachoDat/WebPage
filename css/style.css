@@ -1,97 +1,151 @@
+@charset "UTF-8";
 * {
   margin: 0%;
   padding: 0%; }
 
+/*estilo general*/
 a {
   color: #fc9d90;
   text-decoration: none; }
 
-/* -----------Nav--------------*/
-.nav {
-  display: flex;
-  justify-content: center;
-  background-color: black;
-  height: 200px; }
-  .nav_list {
+#red {
+  background-color: red; }
+
+#orange {
+  background-color: orange; }
+
+#yellow {
+  background-color: yellow; }
+
+#green {
+  background-color: green; }
+
+#lightblue {
+  background-color: lightblue; }
+
+#purple {
+  background-color: purple; }
+
+/*Media Mobile*/
+@media screen and (max-width: 410px) {
+  a {
+    color: black; }
+  /*--------Mobile Nav------*/
+  .nav {
+    display: flex;
+    flex-direction: column; }
+    .nav_list {
+      text-align: center; }
+      .nav_list_item {
+        padding: 5px 0px 5px 0px; } }
+
+/*--------Mobile Main Index------------*/
+.main_colum_index {
+  background-image: url(wall7.jpeg);
+  height: 500px; }
+  .main_colum_index .text {
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: sans-serif;
+    color: #414141; }
+  .main_colum_index .title {
+    margin: 7%;
+    font-weight: bold;
+    font-size: 3rem;
+    color: #f07d12;
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    -webkit-text-stroke: 2px black; }
+
+/*---------Mobile Contacto-------------*/
+/* -----------Media Desktop--------------*/
+@media screen and (min-width: 411px) {
+  /*--------Desktop Nav----------*/
+  .nav {
     display: flex;
     justify-content: center;
-    align-items: center;
-    text-align: center;
-    font-size: 20px;
-    font-weight: bold;
-    width: 750px;
-    padding: 5%; }
-    .nav_list_item {
-      background-image: linear-gradient(to top, black, #458ada);
-      border-radius: 10px;
-      padding: 4%;
-      margin: 0px 5px 0px 5px; }
-    .nav_list .fxgrow3 {
-      flex-grow: 10; }
-    .nav_list .fxgrow2 {
-      flex-grow: 5; }
-    .nav_list .fxgrow1 {
-      flex-grow: 1; }
-
-/*-----------------main---------------*/
-.main, .main1, .main_index, .main_2, .main_3, .main_4 {
-  background-image: linear-gradient(to bottom, black 2%, #3a3a3a 80%);
-  display: flex;
-  justify-content: center;
-  height: 500px; }
-
-.main_colum, .main1 .main_colum_1, .main_index .main_colum_index, .main_2 .main_colum_2 {
-  background-image: url(wall5.jpg);
-  width: 50%;
-  height: 500px; }
-
-.main_index .main_colum_index {
-  display: flex;
-  flex-direction: column;
-  align-items: center; }
-
-.main_index .title {
-  margin: 7%;
-  font-weight: bold;
-  font-size: 40px;
-  color: #f07d12;
-  text-align: center; }
-
-.main_index .text {
-  width: 75%;
-  text-align: center;
-  margin: 20px;
-  font-size: 25px; }
-
-.main_2 .main_colum_2 {
-  background-image: url(wall5.jpg);
-  width: 50%;
-  height: 500px;
-  display: grid;
-  grid-template-columns: 2fr 2fr 2fr 2fr 2fr;
-  grid-template-rows: 2fr 2fr 2fr 2fr 2fr;
-  grid-template-areas: "Left top top top right"  "Left a1 a2 a3  right " "left a4 a5 a6 right" "left a7 a8 a9 right" "left bot bot bot right";
-  align-content: center; }
-  .main_2 .main_colum_2 #a1 {
-    grid-area: a1; }
-  .main_2 .main_colum_2 #a2 {
-    grid-area: a2; }
-  .main_2 .main_colum_2 #a3 {
-    grid-area: a3; }
-  .main_2 .main_colum_2 #a4 {
-    grid-area: a4; }
-  .main_2 .main_colum_2 #a5 {
-    grid-area: a5; }
-  .main_2 .main_colum_2 #a6 {
-    grid-area: a6; }
-  .main_2 .main_colum_2 #a7 {
-    grid-area: a7; }
-  .main_2 .main_colum_2 #a8 {
-    grid-area: a8; }
-  .main_2 .main_colum_2 #a9 {
-    grid-area: a9; }
-  .main_2 .main_colum_2 .img_box {
+    background-color: black;
+    height: 200px; }
+    .nav_list {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      font-size: 20px;
+      font-weight: bold;
+      width: 750px;
+      padding: 5%; }
+      .nav_list_item {
+        background-image: linear-gradient(to top, black, #458ada);
+        border-radius: 10px;
+        padding: 4%;
+        margin: 0px 5px 0px 5px; }
+      .nav_list .fxgrow3 {
+        flex-grow: 10; }
+      .nav_list .fxgrow2 {
+        flex-grow: 5; }
+      .nav_list .fxgrow1 {
+        flex-grow: 1; }
+  /*-----------------Desktop Main General---------------*/
+  .main, .main1, .main_index, .main_2, .main_3, .main_4 {
+    background-image: linear-gradient(to bottom, black 2%, #3a3a3a 80%);
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    width: 75%; }
+    justify-content: center;
+    height: 500px; }
+  .main_colum, .main1 .main_colum_1, .main_index .main_colum_index, .main_2 .main_colum_2 {
+    background-image: url(wall7.jpeg);
+    width: 50%;
+    height: 500px; }
+  /*-----------Desktop pagina1---------*/
+  /*------Desktop Main index-------*/
+  .main_index .main_colum_index {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+  .main_index .title {
+    margin: 7%;
+    font-weight: bold;
+    font-size: 3rem;
+    color: #f07d12;
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; }
+  .main_index .text {
+    width: 75%;
+    text-align: center;
+    margin: 20px;
+    font-size: 25px; }
+  /*----------Desktop Discografía-------*/
+  .main_2 .main_colum_2 {
+    background-image: url(wall5.jpg);
+    width: 50%;
+    height: 500px;
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr 2fr 2fr;
+    grid-template-rows: 2fr 2fr 2fr 2fr 2fr;
+    grid-template-areas: "Left top top top right"  "Left a1 a2 a3  right " "left a4 a5 a6 right" "left a7 a8 a9 right" "left bot bot bot right";
+    align-content: center; }
+    .main_2 .main_colum_2 #a1 {
+      grid-area: a1; }
+    .main_2 .main_colum_2 #a2 {
+      grid-area: a2; }
+    .main_2 .main_colum_2 #a3 {
+      grid-area: a3; }
+    .main_2 .main_colum_2 #a4 {
+      grid-area: a4; }
+    .main_2 .main_colum_2 #a5 {
+      grid-area: a5; }
+    .main_2 .main_colum_2 #a6 {
+      grid-area: a6; }
+    .main_2 .main_colum_2 #a7 {
+      grid-area: a7; }
+    .main_2 .main_colum_2 #a8 {
+      grid-area: a8; }
+    .main_2 .main_colum_2 #a9 {
+      grid-area: a9; }
+    .main_2 .main_colum_2 .img_box {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      width: 75%; }
+  /*-----------Desktop Pagina3----------*/
+  /*----------Desktop Pagina4-----------*/ }
