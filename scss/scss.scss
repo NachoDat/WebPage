@@ -1,18 +1,24 @@
 *{margin: 0%;padding: 0%;}
                                                                 /*estilo general*/
 @import "variables.scss";
-
 a{
     color: rgb(252, 157, 144);
     text-decoration: none;
 }
+main{
+    background-image: linear-gradient(to bottom ,black 2%, rgb(58, 58, 58) 80%);
+}
+body{
+display: flex;
+flex-direction: column;
+
+}
 .FooterStyle{
-    transition: padding 2s;
-    padding:10px 0px 0px 0px;
+ 
+    background-image: linear-gradient(to bottom, black, white);
+    width: 100%;
 }
-.FooterStyle:hover{
-padding:0px 0px 50px 0px;
-}
+
 $navbgcolor:red, orange, yellow,green, lightblue,purple;
 
 @each $bgcolor in $navbgcolor{
@@ -21,20 +27,20 @@ $navbgcolor:red, orange, yellow,green, lightblue,purple;
     }
 }
 
-@mixin text($fontsizetext){
+@mixin text($fontsizetext, $textcolor){
     text-align: center;
     font-size:$fontsizetext;
     font-family: sans-serif;
+    color: $textcolor;
 }
 
-@mixin titles($fontsizetitle){
+@mixin titles($fontsizetitle, $titlecolor){
     margin: 7%;
     font-weight: bold;
     font-size: $fontsizetitle;
-    color: rgb(240, 125, 18);
+    color: $titlecolor;
     text-align: center;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-
 }
                                                                 /*Media Mobile*/
 @media screen and (max-width:410px){
@@ -59,28 +65,61 @@ $navbgcolor:red, orange, yellow,green, lightblue,purple;
 }
 /*--------Mobile Main Index------------*/
 .main_colum_index{
+    display: flex;
+    flex-direction: column;
     background-image: url(wall7.jpeg);
     height: 500px;
 
         .text{
-            @include text(1.5rem);
-            color: rgb(65, 65, 65)
+            @include text(1.5rem, black);
         }
         .title{
-            @include titles(3rem);
+            @include titles(3rem, rgb(240, 125, 18));
             -webkit-text-stroke: 2px black;
         }
+}
+/*-------------Mobile Discografía----------*/
+.main_2{
+.main_colum_2{
+    width: 100%;
+    background-image: url(wall7.jpeg);
+    $Listacolums: a1,a2,a3,a4,a5,a6,a7,a8,a9,a10;
+            @each $a1 in $Listacolums{
+                ##{$a1}{
+                    grid-area: $a1;
+                }
+            }
+
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 1fr 1fr 1fr 1fr ;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas:"left top top right"
+                        "left a1 a2 right"
+                        "left a3 a4 right"
+                        "left a5 a6 right"
+                        "left a7 a8 right"
+                        "left a9 a10 right" ;
+        .title{
+            @include titles(3rem, rgb(240, 125, 18));
+            grid-area: top;
+        }
+        .text{
+            @include titles(1.5rem, white )
+        }
+        
+    }
 }
 
 /*---------Mobile Contacto-------------*/
 .main_4{
-    background-image: linear-gradient(to bottom ,black 2%, rgb(58, 58, 58) 80%);
+    
     height: 500px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: white;
-    @include text(1.5rem);
+
+    @include text(1.5rem, white);
         #FormItself{
             display: flex;
             flex-direction: column;
@@ -99,8 +138,20 @@ $navbgcolor:red, orange, yellow,green, lightblue,purple;
             margin: 20px;
             font-size: 20px;
         }
+        .FooterStyle{
+            margin: auto;
+            width: 100%;
+        }
     }
-
+/*------------Mobile Historia------------*/
+.main_1{
+        .title{
+            @include titles(2rem,rgb(240, 125, 18) )
+        }
+        .text{
+            @include text(1.5rem, white);
+        }
+}
 
                                                 /* -----------Media Desktop--------------*/
 @media screen and (min-width:411px){
@@ -169,9 +220,10 @@ $navbgcolor:red, orange, yellow,green, lightblue,purple;
         display: flex;
         flex-direction: column;
         align-items: center;
+        background-image: url(wall7.jpeg);
     }
     .title{
-       @include titles(3rem);
+       @include titles(3rem, rgb(240, 125, 18));
     }
     .text{
         width: 75%;
